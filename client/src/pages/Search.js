@@ -463,14 +463,14 @@ class Search extends Component {
     };
 
     profileButtonAction = () => {
-        window.location = "/profile"
+        this.props.history.push("/profile");
     };
 
     logoutUser() {
         API.logoutUser({
         })
             .then(res => {
-                console.log("User has logged out")
+                console.log("User has logged out.")
 
             })
             .catch(err => console.log(err));
