@@ -7,10 +7,24 @@ import Login from "./pages/Login";
 const App = () => (
   <Router>
     <div>
+
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/search">Search</Link>
+        </li>
+        <li>
+          <Link to="/profile">Profile</Link>
+        </li>
+      </ul>
+
+
       <Switch>
         <Route exact path='/' component={Login} />
-        <Route exact path='/search' component={Search} />
-        <Route exact path='/profile' component={Profile}/>
+        <Route path='/search' component={Search} />
+        <Route path='/profile' component={Profile}/>
       </Switch>
     </div>
   </Router>
