@@ -8,7 +8,7 @@ const App = () => (
   <Router>
     <div>
 
-      <ul>
+      {/* <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -18,7 +18,7 @@ const App = () => (
         <li>
           <Link to="/profile">Profile</Link>
         </li>
-      </ul>
+      </ul> */}
 
       <Switch>
         <Route exact path='/' component={Login} />
