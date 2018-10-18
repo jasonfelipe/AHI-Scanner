@@ -8,15 +8,13 @@ import "./pages/pages.css"
 
 const App = () => (
   <Router>
-    <div className="content">
-      <div className="content-inside">
-        <Switch>
-          <Route exact path='/' component={Login} />
-          <Route path='/search' component={Search} />
-          <Route path='/profile' component={Profile} />
-        </Switch>
-        <Footer />
-      </div>
+    <div className="content-inside">
+      <Switch>
+        <Route exact path='/' component={Login} />
+        <Route path='/search' component={Search} />
+        <Route path='/profile' component={Profile} />
+      </Switch>
+      <Footer />
     </div>
   </Router>
 
