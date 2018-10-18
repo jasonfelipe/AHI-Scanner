@@ -41,6 +41,7 @@ class Login extends Component {
             loginUserMessage: "",
             loginColor: "red",
             errorModal: false,
+            successModal: false,
 
         };
     }
@@ -80,6 +81,20 @@ class Login extends Component {
         });
     }
 
+
+
+    hideSuccessModal = () => {
+        this.setState({
+            errorModal: false
+        });
+    }
+
+    showSuccessModal = () => {
+        this.setState({
+            errorModal: true
+        });
+    }
+
     // clear user submit
     createUserState() {
         this.setState({
@@ -103,13 +118,13 @@ class Login extends Component {
         userAry.push(userObj);
         API.postUser(userObj)
             .then(res => {
-                console.log("submited data and here is res: ", res)
+                // console.log("submited data and here is res: ", res)
+                this.showSuccessModal();
 
                 if (!res.data) {
                     console.log("we made it to the second layer");
-                    // alert("Username already exists! Please use another");
                     this.setState({
-                        createUserMessage: "Username or Password already exsists",
+                        createUserMessage: "Username or Password already exists",
                         createColor: "red"
                     })
                 }
@@ -126,6 +141,7 @@ class Login extends Component {
 
         event.preventDefault();
     }
+    
     // CLEAR login state
     clearLoginState() {
         this.setState({
@@ -345,6 +361,29 @@ class Login extends Component {
 
                                 <div className='modal-footer'>
                                     <button className='btn btn-danger' onClick={this.hideErrorModal}>Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </Modal>
+
+
+                    <Modal show={this.state.successModal}>
+                        <div className='modal-content'>
+
+                            <div className='modal-header'>
+                                <h3 style={{ color: 'green' }} className='modal-title'>
+                                    User Created!
+                                </h3>
+                            </div>
+
+                            <div style={{ color: 'black' }} className='modal-body'>
+
+                                <p>Successfully created username!</p>
+                                <p>Please log in!</p>
+
+
+                                <div className='modal-footer'>
+                                    <button className='btn btn-danger' onClick={this.hideSuccessModal}>Close</button>
                                 </div>
                             </div>
                         </div>
