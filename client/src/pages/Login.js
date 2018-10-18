@@ -126,7 +126,7 @@ class Login extends Component {
                     })
                 }
                 else{
-                console.log("submited data and here is res: ", res)
+                // console.log("submited data and here is res: ", res)
                 this.showSuccessModal();
                 this.handleHideNewUserModal();
                 }
