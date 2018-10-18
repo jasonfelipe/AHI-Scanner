@@ -9,11 +9,14 @@ import "./pages/pages.css"
 const App = () => (
   <Router>
     <div>
-      <Switch>
-        <Route exact path='/' component={Login} />
-        <Route path='/search' component={Search} />
-        <Route path='/profile' component={Profile} />
-      </Switch>
+      
+      <div className='content'>
+        <Switch>
+          <Route exact path='/' component={Login} />
+          <Route path='/search' component={Search} />
+          <Route path='/profile' component={Profile} />
+        </Switch>
+      </div>
       <Footer />
     </div>
   </Router>
