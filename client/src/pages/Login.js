@@ -120,9 +120,10 @@ class Login extends Component {
             .then(res => {
                 // console.log("submited data and here is res: ", res)
                 this.showSuccessModal();
+                this.handleHideNewUserModal();
 
                 if (!res.data) {
-                    console.log("we made it to the second layer");
+                    // console.log("we made it to the second layer");
                     this.setState({
                         createUserMessage: "Username or Password already exists",
                         createColor: "red"
