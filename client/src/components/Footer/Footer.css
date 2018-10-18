@@ -1,5 +1,6 @@
 .footer {
   min-height: 50px;
+  margin-top: -50px;
   background: #252a3d;
   bottom: 0;
   width:100%;
@@ -14,4 +15,12 @@
   padding: 3px;
   text-align: center;
   color: white;
+}
+
+.content {
+  min-height: 100%;
+}
+.content-inside {
+  padding: 20px;
+  padding-bottom: 50px;
 }
