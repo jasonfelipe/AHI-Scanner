@@ -85,13 +85,13 @@ class Login extends Component {
 
     hideSuccessModal = () => {
         this.setState({
-            errorModal: false
+            successModal: false
         });
     }
 
     showSuccessModal = () => {
         this.setState({
-            errorModal: true
+            successModal: true
         });
     }
 
@@ -141,7 +141,7 @@ class Login extends Component {
 
         event.preventDefault();
     }
-    
+
     // CLEAR login state
     clearLoginState() {
         this.setState({
