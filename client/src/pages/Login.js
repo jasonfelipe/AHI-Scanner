@@ -118,14 +118,14 @@ class Login extends Component {
         userAry.push(userObj);
         API.postUser(userObj)
             .then(res => {
-                // console.log("submited data and here is res: ", res)
+                console.log("submited data and here is res: ", res)
                 this.showSuccessModal();
                 this.handleHideNewUserModal();
 
                 if (!res.data) {
                     // console.log("we made it to the second layer");
                     this.setState({
-                        createUserMessage: "Username or Password already exists",
+                        createUserMessage: "Username already exists",
                         createColor: "red"
                     })
                 }
