@@ -118,10 +118,6 @@ class Login extends Component {
         userAry.push(userObj);
         API.postUser(userObj)
             .then(res => {
-                console.log("submited data and here is res: ", res)
-                this.showSuccessModal();
-                this.handleHideNewUserModal();
-
                 if (!res.data) {
                     // console.log("we made it to the second layer");
                     this.setState({
@@ -129,7 +125,11 @@ class Login extends Component {
                         createColor: "red"
                     })
                 }
-
+                else{
+                console.log("submited data and here is res: ", res)
+                this.showSuccessModal();
+                this.handleHideNewUserModal();
+                }
             })
             .catch(err => console.log(err));
     };
