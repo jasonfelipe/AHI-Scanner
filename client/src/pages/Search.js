@@ -451,13 +451,13 @@ class Search extends Component {
 
                 }
             }).catch(err => {
-                console.log("ERR on L449: ", err);
+                // console.log("ERR on L449: ", err);
                 this.setState({ showResultsModal: true })
 
             });
     };
+    
     logoutButtonAction = () => {
-
         this.logoutUser()
         window.location = "/"
     };
