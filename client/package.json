@@ -10,7 +10,7 @@
     "express": "^4.15.4",
     "express-session": "^1.15.6",
     "if-env": "^1.0.4",
-    "mongoose": "^5.0.17",
+    "mongoose": "^5.7.5",
     "prop-types": "^15.6.2",
     "quagga": "^0.12.1",
     "react": "^16.0.0",
